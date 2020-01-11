@@ -1,0 +1,120 @@
+/* pages/about/about.wxss */
+
+.split-title-box{
+  border-bottom: 1rpx solid #eee;
+}
+.split-title-box .title-wrap{
+  text-align: center;
+  position: relative;
+  padding: 10rpx 0;
+  display: flex;
+
+  margin: 0 auto;
+  width: 200rpx;
+}
+.split-title-box .title-wrap .split-line{
+
+  height: 0rpx;
+  width: 20rpx;
+  margin: 20rpx 10rpx;
+  border: 1rpx solid #999;
+  /* position: absolute; */
+  /* top: 50rpx; */
+
+}
+.split-title-box .title-wrap .title{
+  background-color: white;
+  margin: 0;
+}
+
+.banner image{
+  width: 100%;
+}
+
+.about{
+  margin-top: 20rpx;
+  background-color: white;
+}
+.about .content{
+  padding: 40rpx;
+}
+.about .summary{
+  text-align: center;
+  
+}
+
+.summary .line-1{
+  padding: 20rpx 0 20rpx;
+}
+
+.summary .line-2{
+  padding: 20rpx 0 30rpx;
+  line-height: 38rpx;
+}
+.desc .row > view {
+  display: inline-block;
+}
+.desc .row .img-box {
+  width: 335rpx;
+  padding: 10rpx;
+}
+
+.desc .row .words{
+  width: 335rpx;
+  /* padding: 20rpx; */
+  vertical-align:top;
+}
+
+.desc .row .words >view{
+  padding: 20rpx;
+}
+
+/* 特点 */
+.feature{
+  margin-top: 20rpx;
+  background-color: white;
+  padding: 40rpx;
+}
+.feature .row{
+  /* height: 250rpx; */
+  
+}
+.feature .row + .row{
+  margin-top: 20rpx;
+}
+.feature .row .col{
+  border: 1rpx solid #eee;
+  display: inline-block;
+  padding: 26rpx 20rpx;
+  width: 325rpx;
+
+  text-align: center;
+}
+.feature .row .col + .col{
+  margin-left: 20rpx;
+}
+.feature .row .col text{
+  display: inline-block;
+}
+.feature .row .col .name{
+  /* padding: 40rpx 20rpx; */
+  width: 200rpx;
+  line-height: 54rpx;
+}
+
+.feature .row .col .icon{
+  font-size: 54rpx;
+  width: 65rpx;
+}
+
+.video {
+  margin-top: 20rpx;
+  background-color: white;
+  padding: 40rpx;
+}
+.video video{
+  width: 100%;
+}
+.video >view{
+  padding: 20rpx 0;
+}

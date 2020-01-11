@@ -38,7 +38,7 @@
 }
 .split-title-box .title-wrap .split-line{
 
-  height: 1rpx;
+  height: 0rpx;
   width: 20rpx;
   margin: 20rpx 10rpx;
   border: 1rpx solid #999;
@@ -113,6 +113,7 @@ padding: 24rpx 91rpx;
 }
 .right-box  .title-wrap{
   padding-right: 200rpx;
+  padding-left: 20rpx;
 }
 .item-box  .title-wrap .primary{
   /* font-weight: 600; */
@@ -212,15 +213,16 @@ padding: 24rpx 91rpx;
   margin-top: 20rpx;
 }
 .hot-service .cu-list .cu-item{
-  height: 200rpx;
+  height: 240rpx;
   margin-top: 10rpx;
 }
 .hot-service .cu-list .cu-item .cu-avatar{
-  width: 180rpx;
-  height: 180rpx;
+  width: 220rpx;
+  height: 220rpx;
 }
 .hot-service .cu-list .cu-item .content{
-  left: 220rpx;
+  left: 0rpx;
+  position: relative;
 }
 /* .hot-service .cu-list .cu-item .content .desc{
   font-size: ;
@@ -234,4 +236,19 @@ padding: 24rpx 91rpx;
   background-color: white;
   margin-top: 20rpx;
   height: 400rpx;
+}
+
+.float-btn{
+  position: fixed;
+  bottom: 150rpx;
+  right: 20rpx;
+}
+.float-btn .call{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px dashed transparent;
+  background-color: white;
+  text-align: center;
+  font-size: 100rpx;
 }

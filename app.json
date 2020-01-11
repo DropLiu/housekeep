@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/book/book",
+    "pages/about/about",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -20,12 +22,12 @@
       "iconPath":"images/tabbar/tab-home.png",
       "selectedIconPath":"images/tabbar/tab-home-fill.png"
     },{
-      "pagePath":"pages/index/index",
+      "pagePath":"pages/about/about",
       "text":"关于我们",
       "iconPath":"images/tabbar/tab-more.png",
       "selectedIconPath":"images/tabbar/tab-more-fill.png"
     },{
-      "pagePath":"pages/index/index",
+      "pagePath":"pages/book/book",
       "text":"预约",
       "iconPath":"images/tabbar/tab-clock.png",
       "selectedIconPath":"images/tabbar/tab-clock-fill.png"

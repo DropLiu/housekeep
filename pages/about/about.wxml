@@ -1,0 +1,75 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+	<view class="banner">
+		<image src="http://515046.s81i.faiusr.com/2/101/AFEI5rcfEAIYACD3sM7jBSj0nZC8BTDuBTjoAkBl.jpg"></image>
+	</view>
+
+	<view class="about">
+		<view class="split-title-box">
+			<view class="title-wrap">
+				<text class="split-line"></text>
+				<text>关于我们</text>
+				<text class="split-line"></text>
+			</view>
+		</view>
+		<view class="content">
+			<view class="summary text-sm">
+				<view class="line-1">TEMPLATE服务涵盖家政、搬家、等众多领域。</view>
+				<view class="line-2">在上门O2O模式的三年深耕细作下，我们深入触达全国30余个城市的160万上门服务人员，并为我们带给2000万家庭用户便捷和安心的高品质上门生活服务充满力量。</view>
+			</view>
+			<view class="desc">
+				<view class="row row-1">
+					<view class="img-box">
+						<image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACCgg4nhBSiqv937BTCsAjiEAkBl.png"></image>
+					</view>
+					<view class="words">
+						<view class="title">
+							| 价值观 —
+						</view>
+						<view class="text-sm">未来，我们会继续沿着让亿万家庭生活更简单、为上门服务人员提供更多的就业机会”的愿景持续创造价值。</view>
+					</view>
+				</view>
+				<view class="row row-2">
+					<view class="words">
+						<view class="title">
+							| 理念 —
+						</view>
+						<view class="text-sm">我们的家政服务一直秉承绿色的核心理念，以绿色文化、服务家庭文化为企业核心文化价值。积极进取，与客户共赢。</view>
+					</view>
+					<view class="img-box">
+						<image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACCeg4nhBSi0vaPhBzCsAjiEAkBl.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+      <!-- 特点 -->
+    <view class="feature">
+      <view class="row">
+        <view class="col">
+          <text class="name">生活全品类</text>
+          <text class="icon cuIcon-apps text-blue"></text>
+        </view>
+        <view class="col">
+          <text class="name">平台保障</text>
+          <text class="icon cuIcon-safe text-blue"></text>
+        </view>
+      </view>
+      <view class="row">
+        <view class="col">
+          <text class="name">安全及时</text>
+          <text class="icon cuIcon-time text-blue"></text>
+        </view>
+        <view class="col">
+          <text class="name">专业放心</text>
+          <text class="icon cuIcon-appreciate text-blue"></text>
+        </view>
+      </view>
+    </view>
+
+    <view class="video">
+      <video src="//qz.faisys.com/image/default_video.mp4"></video>
+      <view>家政服务宣传片</view>
+    </view>
+</view>
