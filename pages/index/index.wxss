@@ -181,7 +181,30 @@ padding: 24rpx 91rpx;
   padding: 0rpx 20rpx;
 }
 
-
+/* 展示 */
+.show{
+  background-color: white;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+.show .show-box{
+  position: relative;
+  height: 378rpx;
+}
+.show .show-box image{
+  width: 100%;
+  
+  border-radius: 15rpx;
+}
+.show .show-box .desc{
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 0 0 15rpx 15rpx;
+  padding: 10rpx;
+  width: 100%;
+}
 
 /* <!-- 热门服务 --> */
 .hot-service{

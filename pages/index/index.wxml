@@ -98,7 +98,13 @@
     </view>
   </view>
 </view>
-
+<!-- 展示 -->
+  <view class="show">
+    <view class="show-box">
+      <image mode="widthFix" src="http://515046.s81i.faiusr.com/2/101/AFEI5rcfEAIYACCDlPblBSj484OPAzDuBTiQA0Bl.jpg"></image>
+      <view class="desc">场景展示</view>
+    </view>
+  </view>
 <!-- 热门服务 -->
   <view class="hot-service">
     <view class="more-title-wrap">

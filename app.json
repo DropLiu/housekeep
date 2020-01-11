@@ -9,6 +9,34 @@
     "navigationBarTitleText": "家政服务",
     "navigationBarTextStyle": "black"
   },
+  "tabBar":{
+    "color": "#000",
+    "selectedColor":"#3a82f8",
+    "backgroundColor": "#fff",
+
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"家政服务",
+      "iconPath":"images/tabbar/tab-home.png",
+      "selectedIconPath":"images/tabbar/tab-home-fill.png"
+    },{
+      "pagePath":"pages/index/index",
+      "text":"关于我们",
+      "iconPath":"images/tabbar/tab-more.png",
+      "selectedIconPath":"images/tabbar/tab-more-fill.png"
+    },{
+      "pagePath":"pages/index/index",
+      "text":"预约",
+      "iconPath":"images/tabbar/tab-clock.png",
+      "selectedIconPath":"images/tabbar/tab-clock-fill.png"
+    },{
+      "pagePath":"pages/index/index",
+      "text":"我的",
+      "iconPath":"images/tabbar/tab-my.png",
+      "selectedIconPath":"images/tabbar/tab-my-fill.png"
+    }]
+  },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
