@@ -1,0 +1,148 @@
+<view class="container">
+  <view class="banner-wrap">
+    <swiper class="banner" indicator-dots="true"
+    autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}"
+    duration="{{swiper.duration}}" circular="{{siper.circular}}"
+      >
+      <swiper-item class="bg-white" wx:for="{{swiper.list}}">
+        <image mode="widthFix" src="{{item.img}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 服务分类 -->
+  <view class="categoty">
+    <view class="categoty-box">
+      <view class="split-title-box">
+        <view class="title-wrap">
+          <text class="split-line"></text>
+          <text>服务分类</text>
+          <text class="split-line"></text>
+        </view>
+      </view>
+      <view class="item-list">
+        <view class="item">
+          <image src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDF9YjhBSj4xczQBzBaOFpAZQ.png"></image>
+          <view>家庭保洁</view>
+        </view>
+        <view class="item" class="item">
+          <image src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDE9YjhBSjUkPGvBDBaOFpAZQ.png"></image>
+          <view>保姆月嫂</view>
+        </view>
+        <view class="item" class="item">
+          <image src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDH9YjhBSjivPe8BzBaOFpAZQ.png"></image>
+          <view>房屋维修</view>
+        </view>
+        <view class="item" class="item">
+          <image src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDJ9YjhBSjXtecaMFo4WkBl.png"></image>
+          <view>搬家速运</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 家居优化 -->
+  <view class="home-improve">
+      <view class="split-title-box">
+        <view class="title-wrap">
+          <text class="split-line"></text>
+          <text>家居优化</text>
+          <text class="split-line"></text>
+        </view>
+      </view>
+      <view class="item-box">
+        <view class="left-box">
+          <view class="title-wrap">
+            <view class="primary">甲醛治理</view>
+            <view class="sub">守护您的健康</view>
+          </view>
+          <image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDs9ojhBSiYpZB4MMoCONQCQGU.png"></image>
+        </view>
+        <view class="right-box">
+          <view class="right-top">
+            <view class="title-wrap">
+            <view class="primary">精品装饰</view>
+            <view class="sub">点缀浪漫</view>
+            </view>
+          <image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDo9ojhBSj4o_VxMMoCOJsBQGU.png"></image>
+          </view>
+          <view class="right-bottom">
+            <view class="title-wrap">
+              <view class="primary">家具安装</view>
+              <view class="sub">一步到位</view>
+            </view>
+            <image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDq9ojhBSjf-u2eBDDKAjibAUBl.png"></image>
+          </view>
+        </view>
+      </view>
+  </view>
+
+<!-- 服务 -->
+<view class="service">
+  <view class="banner">
+  <image mode="widthFix" class="title" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDc_IjhBSjIitzbAzCWAjhhQGU.png"></image>
+    <image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACCa_IjhBSjovrLfAjDuBTjhAUBl.png"></image>
+  </view>
+  <view class="recommend">
+    <view class="left">
+      <image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACD1_ojhBSjSldGuATDKAjjcAUBl.png"></image>
+      <view>
+        <view>空调安装</view>
+        <view class="text-sm">安心上门质量服务</view>
+      </view>
+    </view>
+    <view class="right">
+      <image mode="widthFix" src="http://515046.s81i.faiusr.com/4/101/AFEI5rcfEAQYACDk_ojhBSj2mL-CBzDKAjjcAUBl.png"></image>
+      <view>
+        <view>家居清洗</view>
+        <view class="text-sm">清洗上门质量服务</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 热门服务 -->
+  <view class="hot-service">
+    <view class="more-title-wrap">
+      <view class="title">热门服务</view>
+      <view class="more">
+      查看全部<text class="cuIcon-right"></text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item" wx:for="{{hotService.list}}">
+        <view class="cu-avatar radius lg" style="background-image:url({{item.img}});">
+          <view class="cu-tag badge">促</view>
+        </view>
+        <view class="content">
+          
+            <view class="text-cut">{{item.title}}</view>
+            <view class="text-cut text-sm text-grey">{{item.desc}}</view>
+          
+          <view class="price">
+            <text class="text-blue text-bold">￥{{item.promotePrice}} </text>
+            <s class="original text-grey text-sm">￥{{item.originalPrice}}</s>
+          </view>
+          <view class="order text-sm">
+            <text class="">已预约：{{item.book}} </text>
+            <text>剩余：{{item.remain}}</text>
+          </view>
+        </view>
+    </view>
+    </view>
+  </view>
+
+
+  <!-- 家政新闻 -->
+  <view class="news">
+    <view class="more-title-wrap">
+      <view class="title">家政新闻</view>
+      <view class="more">
+      查看全部<text class="cuIcon-right"></text>
+      </view>
+    </view>
+    <view class="list-box">
+      <view>
+
+      </view>
+    </view>
+  </view>
+</view>
