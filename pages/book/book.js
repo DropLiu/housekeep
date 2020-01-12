@@ -5,7 +5,21 @@ Page({
    * Page initial data
    */
   data: {
+    tab:{
+      TabCur: 0,
+      scrollLeft:0,
+      list:[
+        "全部","家庭保洁","保姆月嫂","家电维修"
+      ]
+    }
 
+  },
+
+  tabSelect(e) {
+    this.setData({
+      "tab.TabCur": e.currentTarget.dataset.id,
+      "tab.scrollLeft": (e.currentTarget.dataset.id-1)*60
+    })
   },
 
   /**

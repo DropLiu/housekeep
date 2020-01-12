@@ -147,9 +147,15 @@
       </view>
     </view>
     <view class="list-box">
-      <view>
-
-      </view>
+      <scroll-view class="scroll-list" scroll-x="true" bindscroll="scroll">
+          <view class="item" wx:for="{{news.list}}">
+            <image mode="aspectFill" src="{{item.img}}"></image>
+            <view>
+              <view class="title">{{item.title}}</view>
+              <view class="desc text-grey text-sm text-cut">{{item.desc}}</view>
+            </view>
+          </view>
+        </scroll-view>
     </view>
   </view>
 </view>

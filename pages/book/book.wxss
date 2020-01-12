@@ -1,1 +1,5 @@
 /* pages/book/book.wxss */
+.container .tab{
+  border-top: 1rpx solid #eee;
+  margin-bottom: 20rpx;
+}

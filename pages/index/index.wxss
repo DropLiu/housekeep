@@ -235,9 +235,29 @@ padding: 24rpx 91rpx;
 .news{
   background-color: white;
   margin-top: 20rpx;
-  height: 400rpx;
+  /* height: 400rpx; */
+}
+.news .list-box .scroll-list{
+  width: 100%;
+  white-space: nowrap;
 }
 
+.news .list-box .scroll-list .item{
+  display: inline-block;
+  margin: 20rpx;
+  width: 490rpx;
+}
+.news .item .title{
+  padding: 20rpx 0 10rpx;
+}
+.news .item image{
+  width: 490rpx;
+  height: 280rpx;
+  border-radius: 15rpx;
+}
+
+
+/* 悬浮按钮 */
 .float-btn{
   position: fixed;
   bottom: 150rpx;
