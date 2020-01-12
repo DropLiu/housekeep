@@ -1,11 +1,43 @@
 <!--pages/book/book.wxml-->
 <view class="container">
-  <scroll-view scroll-x class="tab bg-white nav text-center">
-    <view class="cu-item {{index==tab.TabCur?'text-blue cur':''}}" wx:for="{{tab.list}}" wx:key bindtap="tabSelect" data-id="{{index}}">
-      {{item}}
-    </view>
-  </scroll-view>
-  
-  <view>
-  </view>
+	<view class="tab-box">
+		<scroll-view scroll-x class="tab bg-white nav text-center">
+			<view class="cu-item {{index==tab.TabCur?'text-blue cur':''}}" wx:for="{{tab.list}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+				{{item}}
+			</view>
+		</scroll-view>
+	</view>
+
+	<view class="list-box">
+		<scroll-view class="list" scroll-y="true">
+			<view class="list-item cu-card case no-card" wx:for="{{book.list}}">
+				<view class="cu-item shadow">
+					<view class="image">
+						<image src="{{item.img}}" mode="widthFix"></image>
+						<view wx:if="{{item.promotePrice!=0}}" class="cu-tag bg-red">促</view>
+					</view>
+					<view class="cu-list menu-avatar">
+						<view class="cu-item">
+							<view class="title">{{item.title}}</view>
+              <view class="desc text-sm text-grey">{{item.desc}}</view>
+              <view class="item-bottom">
+                
+                <view class="left">
+                  <text wx:if="{{item.promotePrice!=0}}" class="text-price text-blue">{{item.promotePrice}}</text>
+                  <text class="text-price {{item.promotePrice==0?'text-blue':'text-grey text-sm text-through'}}">{{item.originalPrice}}</text>
+                  
+                  <text  class="text-grey text-sm">已预约: {{item.booked}}</text>
+                  <text class="text-grey text-sm">剩余: {{item.remain}}</text>
+                </view>
+                <button class="cu-btn round sm bg-blue">立即预约</button>
+              </view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
 </view>
+
+
+
