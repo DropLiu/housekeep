@@ -1,4 +1,6 @@
 //app.js
+import request from './utils/api'
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -10,6 +12,40 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+         let that = this;
+         wx.getUserInfo({
+            success: function (res2) {
+              console.log(res2);
+              // console.log(res2.userInfo);
+              that.globalData.userInfo = res2.userInfo;
+              //that.globalData.userInfo.islogin = true;
+              request.wxlogin({
+                data:{
+                  code:res.code,
+                  nickName: res2.userInfo.nickName,
+                  avatarUrl: res2.userInfo.avatarUrl,
+                  gender: res2.userInfo.gender
+                },
+                success: res=>{
+                  console.log("login res:", res)
+                  if(res.code == 0) {
+                     wx.setStorage({
+                        key: 'access-token',
+                        data: res.data.token,
+                    })
+                  }
+                },
+                fail: res => {
+                  console("login fail:", res)
+                }
+              })
+
+            
+            },
+            fail:function(){
+              // that.authorizeCheck("scope.userInfo");
+            }
+          });
       }
     })
     // 获取用户信息

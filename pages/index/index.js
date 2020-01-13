@@ -1,3 +1,5 @@
+import request from '../../utils/api'
+
 Page({
   data: {
     swiper:{
@@ -66,5 +68,16 @@ Page({
     }
     
   },
+
+  onLoad: function(options) {
+    request.brandList({
+      success: res => {
+        console.log("brandList: " ,res)
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+  }
 
 })
