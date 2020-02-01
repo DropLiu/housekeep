@@ -20,7 +20,7 @@ function shifuList(params) {
 
 // 师傅详细信息
 function shifuInfo(params, id) {
-	request('/wx/shifu/'+id, 'get', params)
+	request('/wx/shifu/' + id, 'get', params)
 }
 
 // 区域列表
