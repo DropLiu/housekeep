@@ -1,0 +1,161 @@
+/* pages/my/my.wxss */
+
+.container {}
+
+/* 头部信息栏 */
+.header {
+
+  padding: 50rpx 0 80rpx;
+  background-color: rgb(58, 130, 248);
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  text-align: center;
+
+  width: 120%;
+  position: relative;
+  left: -10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .info {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.header .avator {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 50rpx;
+}
+
+.header .avator image {
+  /* border: 1px solid rgba(255,255,255,0.5); */
+  border-radius: 50%;
+}
+
+.header .name {
+  color: white;
+}
+
+/* 余下内容 */
+.container > .content {
+  padding: 0 40rpx;
+  position: relative;
+  top: -60rpx;
+
+}
+
+.content>view {
+  background-color: white;
+  border-radius: 15rpx;
+
+  padding: 26rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 订单栏 */
+.order-wrap {}
+
+.order-wrap .order-header {
+  padding: 10rpx 0 20rpx;
+  border-bottom: 2rpx solid #eee;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-wrap .order-header .right{
+  /* color: ; */
+}
+
+.order-wrap .order-list {
+  color: grey;
+  text-align: center;
+  padding: 16rpx 0 10rpx;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.order-wrap .order-list .icon-wrap+.icon-wrap {
+  margin-left: 70rpx;
+}
+
+.order-wrap .order-list .icon-wrap .icon {
+  position: relative;
+  font-size: 60rpx;
+}
+
+.order-wrap .order-list .icon-wrap .icon>text {
+
+}
+.order-wrap .order-list .icon-wrap .icon .cu-tag{
+  background-color: rgb(58, 130, 248);
+}
+
+.order-wrap .order-list .icon-wrap .txt {
+  font-size: 24rpx;
+}
+
+/* 中部服务列表 */
+.container .list{
+
+
+}
+.container .list .item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 10rpx;
+}
+.container .list .item + .item{
+  padding-top: 20rpx;
+  border-top: 1rpx solid#eee;
+}
+.container .list .item .right .count{
+  display: inline-block;
+  height: 30rpx;
+  width: 30rpx;
+
+  font-size: 24rpx;
+  line-height: 30rpx;
+  text-align: center;
+
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+
+}
+
+/* 底部信息栏 */
+.info-wrap{
+
+}
+.info-wrap .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 26rpx;
+
+}
+
+.info-wrap .item + .item{
+  padding-top: 20rpx;
+}
+
+.info-wrap .item .left{
+  color: #666;
+}
+.info-wrap .item .left text[class^="cuIcon-"]{
+  color: #999;
+}
+.info-wrap .item .left .content{
+  padding-left: 10rpx;
+}

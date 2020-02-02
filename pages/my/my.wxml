@@ -1,0 +1,132 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+
+	<view class="header">
+		<view class="info" bindtap="toLogin">
+			<view class="avator">
+				<image mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+			</view>
+			<view class="name text-cut">
+				{{userInfo.nickName}}
+			</view>
+		</view>
+	</view>
+
+	<view class="content ">
+		<view class="order-wrap">
+			<view class="order-header">
+				<text class="txt">我的订单</text>
+				<view class="right text-grey text-sm" id="0" bindtap="toOrder">
+					<!-- <text class="all">查看全部</text> -->
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="order-list">
+				<view class="icon-wrap" id="1" bindtap="toOrder">
+					<view class="icon">
+						<text class="cuIcon-pay"></text>
+						<view class="cu-tag badge" wx:if="order.pay>0">{{order.pay}}</view>
+					</view>
+					<text class="txt">待付款</text>
+				</view>
+				<view class="icon-wrap" id="2" bindtap="toOrder">
+
+					<view class="icon">
+						<text class="cuIcon-send"></text>
+						<view class="cu-tag badge" wx:if="order.toSend>0">{{order.toSend}}</view>
+					</view>
+					<text class="txt">进行中</text>
+				</view>
+				<view class="icon-wrap" id="3" bindtap="toOrder">
+					<view class="icon">
+						<text class="cuIcon-roundcheck"></text>
+						<view class="cu-tag badge" wx:if="order.send>0">{{order.send}}</view>
+					</view>
+					<text class="txt">已完成</text>
+				</view>
+				<view class="icon-wrap" id="4" bindtap="toOrder">
+					<view class="icon">
+						<text class="cuIcon-roundclose"></text>
+						<view class="cu-tag badge" wx:if="order.comment>0">{{order.comment}}</view>
+					</view>
+
+					<text class="txt">已取消</text>
+				</view>
+			</view>
+		</view>
+
+
+		<view class="list">
+			<view class="item">
+				<text class="title">最新消息</text>
+				<view class="right">
+					<text class="count">1</text>
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="item">
+				<text class="title">我的订阅</text>
+				<view class="right">
+					<text class="count">2</text>
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="item">
+				<text class="title">我填的表</text>
+				<view class="right">
+					<!-- <text class="count">1</text> -->
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+		</view>
+
+		<!-- 底部信息 -->
+		<view class="info-wrap">
+			<view class="address item">
+				<view class="left">
+					<text class="cuIcon-locationfill"></text>
+					<text class="content">xx市xx区xx路xx号</text>
+				</view>
+
+				<view class="right text-grey text-sm">
+					<text class="">100m</text>
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="phone item">
+				<view class="left">
+					<text class="cuIcon-dianhua"></text>
+					<text class="content">1380000000</text>
+				</view>
+				<view class="right text-grey text-sm">
+					<!-- <text class="">100m</text> -->
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+			<view class="time item">
+				<view class="left">
+					<text class="cuIcon-timefill"></text>
+					<text class="content">周一至周五 9:00-18:00</text>
+				</view>
+			</view>
+			<view class="service item">
+				<view class="left">
+					<text class="cuIcon-homefill"></text>
+					<text class="content">服务涵盖家政、搬家、等众多领域，诚意为您服务</text>
+				</view>
+			</view>
+			<view class="about item" bindtap="toAbout">
+				<view class="left">
+					<text class="cuIcon-infofill"></text>
+					<text class="content">关于我们</text>
+				</view>
+				<view class="right text-grey text-sm">
+					<!-- <text class="">100m</text> -->
+					<text class="cuIcon-right"></text>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+</view>

@@ -1,0 +1,13 @@
+<!--pages/auth/tologin/tologin.wxml-->
+<view class="container">
+  <view class="logo">
+    <image mode="aspectFill" src="/images/logo.png"></image>
+  </view>
+
+  <!-- 统一登录入口 -->
+  <view class="login-btn">
+    <button class="cu-btn block bg-blue" open-type="getUserInfo" bind:getuserinfo="wxlogin">微信登录</button>
+    <button class="cu-btn block line-red" bindtap="mlogin">手机登录</button>
+  </view>
+
+</view>

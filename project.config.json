@@ -23,8 +23,8 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.0",
-	"appid": "wxf635a636f4ea34ce",
+	"libVersion": "2.10.1",
+	"appid": "wx9d246d6ec2b163d0",
 	"projectname": "housekeep",
 	"debugOptions": {
 		"hidedInDevtools": []

@@ -1,5 +1,7 @@
 //app.js
+
 import request from './utils/api'
+import "assets/js/qiniuUploader.js"
 
 App({
   onLaunch: function () {
@@ -70,6 +72,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: {
+      nickName: "请点击登录",
+      username: "点击去登录",
+      avatarUrl: "/images/head.png"
+    }
   }
 })

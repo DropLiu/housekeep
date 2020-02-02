@@ -1,0 +1,15 @@
+/* pages/auth/tologin/tologin.wxss */
+
+.logo {
+  text-align: center;
+  padding: 60rpx 0 30rpx;
+}
+.logo image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+
+}
+.login-btn button{
+  margin-top: 20rpx;
+}
