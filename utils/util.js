@@ -17,3 +17,8 @@ const formatNumber = n => {
 module.exports = {
   formatTime: formatTime
 }
+
+
+// function imgUrl(address) {
+//   return address. || ? address : ser + address
+// }

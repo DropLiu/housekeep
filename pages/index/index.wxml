@@ -1,3 +1,4 @@
+
 <view class="container">
 
   <view class="banner-wrap">
@@ -6,7 +7,7 @@
     duration="{{swiper.duration}}" circular="{{siper.circular}}"
       >
       <swiper-item class="bg-white" wx:for="{{swiper.list}}">
-        <image mode="widthFix" src="{{item.img}}"></image>
+        <image mode="widthFix" src="{{ imgSer + item.img}}"></image>
       </swiper-item>
     </swiper>
   </view>
@@ -116,7 +117,7 @@
     </view>
     <view class="cu-list menu-avatar">
       <view class="cu-item" wx:for="{{hotService.list}}">
-        <view class="cu-avatar radius lg" style="background-image:url({{item.img}});">
+        <view class="cu-avatar radius lg" style="background-image:url({{imgSer + item.img}});">
           <view class="cu-tag badge">促</view>
         </view>
         <view class="content">
@@ -134,12 +135,15 @@
           </view>
         </view>
     </view>
+    <view class="more">
+      <text>下拉加载更多</text>
+    </view>
     </view>
   </view>
 
 
   <!-- 家政新闻 -->
-  <view class="news">
+  <!-- <view class="news">
     <view class="more-title-wrap">
       <view class="title">家政新闻</view>
       <view class="more">
@@ -157,7 +161,7 @@
           </view>
         </scroll-view>
     </view>
-  </view>
+  </view> -->
 </view>
 
 <!-- 悬浮按钮 -->

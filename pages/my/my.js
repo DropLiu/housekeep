@@ -57,6 +57,8 @@ Page({
   onShow: function () {
     let userInfo = wx.getStorageSync('userInfo');
     let isLogin = wx.getStorageSync('isLogin');
+    console.log(userInfo)
+    console.log('isLogin: '+isLogin + ":" +wx.getStorageSync('access-token'))
     // 页面显示
     if (userInfo && isLogin) {
       this.setData({
@@ -111,6 +113,11 @@ Page({
     console.log("to page about")
     wx.navigateTo({
       url: '/pages/about/about',
+    })
+  },
+  toApply: function(e){
+    wx.navigateTo({
+      url: '/pages/apply/apply',
     })
   }
 })

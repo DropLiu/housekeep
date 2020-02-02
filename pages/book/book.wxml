@@ -9,11 +9,11 @@
 	</view>
 
 	<view class="list-box">
-		<scroll-view class="list" scroll-y="true">
-			<view class="list-item cu-card case no-card" wx:for="{{book.list}}">
+		<view class="list" scroll-y="true" bindscrolltolower="bottomLoad">
+			<view class="list-item cu-card case no-card" wx:for="{{book.curr}}">
 				<view class="cu-item shadow">
 					<view class="image">
-						<image src="{{item.img}}" mode="widthFix"></image>
+						<image src="{{imgSer + item.img}}" mode="widthFix"></image>
 						<view wx:if="{{item.promotePrice!=0}}" class="cu-tag bg-red">促</view>
 					</view>
 					<view class="cu-list menu-avatar">
@@ -35,7 +35,7 @@
 					</view>
 				</view>
 			</view>
-		</scroll-view>
+		</view>
 	</view>
 </view>
 
