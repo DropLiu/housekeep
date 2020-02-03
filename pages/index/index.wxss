@@ -226,6 +226,7 @@
 .hot-service .cu-list .cu-item .content{
   left: 0rpx;
   position: relative;
+  padding-right: 20rpx;
 }
 /* .hot-service .cu-list .cu-item .content .desc{
   font-size: ;
@@ -234,11 +235,17 @@
   text-decoration:line-through;
 }
 
+.hot-service > .more {
+  text-align: center;
+  padding: 20rpx  0;
+  font-size: 24rpx;
+  color: #999;
+}
+
 /* 新闻 */
-.news{
+/* .news{
   background-color: white;
   margin-top: 20rpx;
-  /* height: 400rpx; */
 }
 .news .list-box .scroll-list{
   width: 100%;
@@ -257,7 +264,7 @@
   width: 490rpx;
   height: 280rpx;
   border-radius: 15rpx;
-}
+} */
 
 
 /* 悬浮按钮 */

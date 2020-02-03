@@ -1,6 +1,6 @@
 // pages/apply/apply.js
-const qiniuUploader = require("../../assets/js/qiniuUploader");
-import { createToken } from '../../assets/js/qiniuUploadToken'
+import request from '../../utils/api'
+import { uploadQiNiu } from '../../assets/js/qiniuUpload';
 Page({
 
   /**
@@ -8,6 +8,8 @@ Page({
    */
   data: {
     picker: ['清洁', '家装', '电信'],
+    category: ['暂无'],
+    typ: ['清洁', '家装', '电信'],
     imgList: [],
     formats: {},
     readOnly: false,
@@ -67,7 +69,32 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const that = this
 
+    //加载大类列表
+    request.categoryList({
+      success(res) {
+        console.log('load category success', res)
+        if (res.code == 0) {
+          var list = []
+          res.data.list.forEach(e => {
+            list.push(e.name)
+          });
+          that.setData({
+            'category': list
+          })
+
+        }
+      },
+      fail(err) {
+        console.log(err)
+        wx.showToast({
+          title: '网络连接失败,请检查网络连接',
+          icon: 'none',
+          duration: 1200
+        })
+      }
+    })
   },
 
   /**
@@ -119,46 +146,13 @@ Page({
 
   },
   uploadImg: function (filePath) {
-    const that = this
 
-    qiniuUploader.upload(filePath, (res) => {
-      that.setData({
-        'imageObject': res
-      });
-      console.log('file url is: ' + res.fileUrl)
-    }, (error) => {
-      console.error('error: ' + JSON.stringify(error));
-    },
-      {
-        region: 'SCN', // 华南区
-        domain: '',
-        shouldUseQiniuFileName: false,
-        key: 'logo',
-        uptokenFunc: function () {
-          var accessKey = "5pPu1GqaNINdSsnjueIHBjhdemr9MhUgAeP4FyUu",
-            secretKey = "f6xp8ny9Twbb4XHnv7wKzZ-_pzy-_7Ik0Ynn8S4i",
-            bucket = "honghe-jiazheng",
-            deadline = new Date().getTime() + 3600 * 1000
-          // deadline = 1580566537639
-          const token = createToken(accessKey, secretKey, bucket, deadline)
-
-          return token
-
-        }
-      },
-
-      (progress) => {
-        console.log('上传进度', progress.progress)
-        console.log('已经上传的数据长度', progress.totalBytesSent)
-        console.log('预期需要上传的数据总长度', progress.totalBytesExpectedToSend)
-      }, cancelTask => that.setData({ cancelTask })
-    );
   },
   // 选中editor
   onEditorReady() {
-    console.log("editor ready")
+    // console.log("editor ready")
     const that = this
-    wx.createSelectorQuery().select('#desc').context(function (res) {
+    wx.createSelectorQuery().select('#detail').context(function (res) {
       that.editorCtx = res.context
     }).exec()
   },
@@ -166,14 +160,21 @@ Page({
     const that = this
     wx.chooseImage({
       count: 1,
+      sizeType: ['original'],
+      sourceType: ['album', 'camera'],
       success: function (res) {
-        that.editorCtx.insertImage({
-          src: res.tempFilePaths[0],
-          width: '80%',
-          success: function () {
-            console.log('insert image success')
-            that.uploadImg(res.tempFilePaths[0])
-          }
+        const filePath = res.tempFilePaths[0];
+
+        uploadQiNiu(filePath, (filePath) => {
+          //插入图片
+          that.editorCtx.insertImage({
+            src: filePath,
+            width: '80%',
+            success: function () {
+              console.log('insert image success')
+              that.uploadImg(res.tempFilePaths[0])
+            }
+          })
         })
       }
     })

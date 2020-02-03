@@ -3,7 +3,7 @@
 
 }
 
-.desc{
+.detail{
   width: 540rpx;
   
   
@@ -12,13 +12,13 @@
   padding: 0;
 }
 
-.desc editor{
-  height: 180rpx;
+.detail editor{
+  height: 380rpx;
   min-height: 100rpx;
   width: 100%;
   line-height: 1.2em;
   font-size: 28rpx;
 }
-.desc .toolbar{
+.detail .toolbar{
   font-size: 38rpx;
 }

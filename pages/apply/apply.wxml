@@ -1,31 +1,37 @@
 <!--pages/apply/apply.wxml-->
 <view class="container">
 	<form>
-		<view class="cu-form-group  margin-top">
+		<view class="cu-form-group">
 			<view class="title">企业名称</view>
-			<input placeholder="请输入企业名称"></input>
+			<input name="name" placeholder="请输入企业名称"></input>
 		</view>
 
 		<view class="cu-form-group">
-			<view class="title">所属行业</view>
-			<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="title">服务大类</view>
+			<picker bindchange="PickerChange" value="{{index}}" range="{{category}}">
 				<view class="picker">
-					{{index?picker[index]:'请点击选择'}}
+					{{index?category[index]:'请点击选择'}}
 				</view>
 			</picker>
 		</view>
 
 		<view class="cu-form-group">
-			<view class="title">企业地址</view>
-			<input placeholder="请输入地址"></input>
-		</view>
-		<view class="cu-form-group">
-			<view class="title">联系电话</view>
-			<input placeholder="请输入电话"></input>
+			<view class="title">服务小类</view>
+			<picker bindchange="PickerChange" value="{{index}}" range="{{typ}}">
+				<view class="picker">
+					<!-- {{index?typ[index]:'请点击选择'}} -->
+					{{typ[index]}}
+				</view>
+			</picker>
 		</view>
 
 		<view class="cu-form-group">
-			<view class="title">所属行业</view>
+			<view class="title">联系电话</view>
+			<input name="phone" placeholder="请输入电话"></input>
+		</view>
+
+		<view class="cu-form-group">
+			<view class="title">服务大图</view>
 			<input placeholder="请输入所属行业"></input>
 		</view>
 
@@ -43,15 +49,51 @@
 			</view>
 		</view>
 
-		<view class="cu-form-group align-start">
-			<view class="title">企业描述</view>
-			<view class="desc">
-				<editor id="desc" class="" bindready="onEditorReady" placeholder="请输入企业描述信息"></editor>
-				<view class="toolbar">
-					<text class="cuIcon-pic" bindtap="insertImg"></text>
-				</view>
-			</view>
+		<view class="cu-form-group">
+			<view class="title">价格</view>
+			<input name="price" placeholder="请输入数字"></input>
+		</view>
 
+		<view class="cu-form-group">
+			<view class="title">热门</view>
+			<input name="hot" placeholder=""></input>
+		</view>
+
+
+		<view class="cu-form-group">
+			<view class="title">服务地区</view>
+			<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+				<view class="picker">
+					{{index?picker[index]:'请点击选择'}}
+				</view>
+			</picker>
+		</view>
+
+		<view class="cu-form-group">
+			<view class="title">企业地址</view>
+			<input name="location" placeholder="请输入地址"></input>
+		</view>
+
+		<view class="cu-form-group align-start">
+			<view class="title">简介</view>
+			<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="多行文本输入框"></textarea>
+		</view>
+		<view class="cu-form-group align-start">
+			<view class="title">详细信息</view>
+
+		</view>
+		<view class="cu-form-group align-start">
+			
+				<view class="detail">
+					<editor id="detail" class="" bindready="onEditorReady" placeholder="请输入详细信息"></editor>
+					<view class="toolbar">
+						<text class="cuIcon-pic" bindtap="insertImg"></text>
+					</view>
+				</view>
+			
+		</view>
+		<view class="cu-form-group">
+			<button class="cu-button" form-type="submit"> 提交</button>
 		</view>
 	</form>
 </view>

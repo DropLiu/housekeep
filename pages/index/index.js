@@ -14,6 +14,7 @@ Page({
       page: 1,
       limit: 4,
       count: 0,
+      load: true,
       list: [
 
       ]
@@ -114,6 +115,9 @@ Page({
           count = data.hotService.count
 
     if(count <= list.length){
+      that.setData({
+        'hotService.load': false
+      })
       return;
     }
 
